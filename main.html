@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js" charset="utf-8"></script>
+  <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.js"></script>
+
+  <script src="board.js" charset="utf-8"></script>
+  <script src="player.js" charset="utf-8"></script>
+  <script src="sketch.js" charset="utf-8"></script>
+  <script src="rotators.js" charset="utf-8"></script>
+  <script src="collide2D.js" charset="utf-8"></script>
+  <script src="ossilators.js" charset="utf-8"></script>
+  <script src="population.js" charset="utf-8"></script>
+
+  <body>
+
+  <button type="button" name="clear" onclick="board.clear()"  val = "clear">clear</button>
+  <button type="button" name="alive" onclick="mode = 'Normal' ; modeColor = 'grey' "  val = "alive">eraser</button>
+
+  <br>
+
+  <button type="button" name="dead" onclick="mode = 'Dead' ; modeColor = 'black' "  val = "dead">dead</button>
+  <button type="button" name="gate" onclick="mode = 'health' ; modeColor = 'white' "  val = "gate">gate</button>
+  <button type="button" name="finish" onclick="mode = 'finish' ; modeColor = 'blue' "  val = "finish">finish</button>
+  <button type="button" name="respwan" onclick="mode = 'respwan' ; modeColor = 'green' "  val = "respwan">spawn</button>
+  <button type="button" name="spawn" onclick="mode = 'spawn' ; modeColor = 'lightblue' "  val = "respwan">respwan</button>
+
+  <br>
+
+  <button type="button" onclick="mode = 'ossilators';modeColor = 'grey'">ossilators</button>
+  <button type="button"  onclick="makeOssilator(0,3)">VerticalOssilator</button>
+  <button type="button"  onclick="makeOssilator(3,0)">HorizontalOssilator</button>
+
+  <br>
+
+  <button type="button" onclick="mode = 'rotators';modeColor = 'grey'">rotators</button>
+  <button type="button" onclick="makeRotator()">makeRotator</button>
+
+  <br>
+
+  <button type="button" onclick="mode = 'coins';modeColor = 'grey'">coins</button>
+  <!-- <button type="button" onclick="makecoin()">makeRotator</button> -->
+
+  <br>
+
+
+  <button type="button" onclick="startgame()">start</button>
+  <button type="button" onclick="gameStarted = false">end</button>
+
+
+
+  <br>
+
+
+  </body>
+</html>
